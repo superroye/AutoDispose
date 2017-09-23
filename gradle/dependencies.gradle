@@ -15,7 +15,7 @@
  */
 
 def versions = [
-    androidTest: '0.5',
+    androidTest: '1.0.1',
     archComponents: '1.0.0',
     archRuntime: '1.0.3',
     dokka: '0.9.15',
@@ -40,7 +40,7 @@ def build = [
     ],
 
     gradlePlugins: [
-        android: 'com.android.tools.build:gradle:2.3.0',
+        android: 'com.android.tools.build:gradle:3.0.0-beta6',
         apt: 'net.ltgt.gradle:gradle-apt-plugin:0.11',
         dokka: "org.jetbrains.dokka:dokka-gradle-plugin:${versions.dokka}",
         dokkaAndroid: "org.jetbrains.dokka:dokka-android-gradle-plugin:${versions.dokka}",
@@ -79,6 +79,7 @@ def support = [
 def test = [
     androidRunner: "com.android.support.test:runner:${versions.androidTest}",
     androidRules: "com.android.support.test:rules:${versions.androidTest}",
+    androidOrchestrator: "com.android.support.test:orchestrator:${versions.androidTest}",
     junit: 'junit:junit:4.12',
     truth: 'com.google.truth:truth:0.36'
 ]

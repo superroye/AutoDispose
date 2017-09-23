@@ -43,6 +43,9 @@ android {
     sourceCompatibility JavaVersion.VERSION_1_7
     targetCompatibility JavaVersion.VERSION_1_7
   }
+  testOptions {
+    execution 'ANDROID_TEST_ORCHESTRATOR'
+  }
 }
 
 dependencies {
@@ -64,6 +67,7 @@ dependencies {
   androidTestCompile deps.support.annotations
   androidTestCompile deps.test.androidRunner
   androidTestCompile deps.test.androidRules
+  androidTestUtil deps.test.androidOrchestrator
 }
 
 tasks.withType(JavaCompile) {
