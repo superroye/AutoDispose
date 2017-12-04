@@ -18,14 +18,13 @@ subprojects {
     buildscript {
         repositories {
             jcenter()
+            google()
         }
     }
 
     repositories {
         jcenter()
-        maven {
-            url 'https://maven.google.com'
-        }
+        google()
     }
 
     apply plugin: 'checkstyle'
