@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
+    Log.d("BLAH", "MainActivity.onCreate - Classloader is " + getClassLoader().getClass()
+        .getCanonicalName());
     Log.d(TAG, "onCreate()");
 
     setContentView(R.layout.activity_main);
@@ -132,5 +134,9 @@ public class MainActivity extends AppCompatActivity {
   @Override protected void onDestroy() {
     Log.d(TAG, "onDestroy()");
     super.onDestroy();
+  }
+
+  @Override public ClassLoader getClassLoader() {
+    return super.getClassLoader();
   }
 }
