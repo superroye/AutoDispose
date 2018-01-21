@@ -17,6 +17,7 @@
 buildscript {
   repositories {
     jcenter()
+    google()
     maven { url deps.build.repositories.plugins }
   }
 
@@ -48,12 +49,14 @@ dependencies {
   annotationProcessor deps.build.nullAway
   testAnnotationProcessor deps.build.nullAway
 
-  compile project(':autodispose')
-  compile deps.support.arch.lifecycle.runtime
-  compile deps.support.arch.lifecycle.extensions
+  api project(':autodispose')
+  api deps.support.arch.lifecycle.runtime
+  api deps.support.annotations
+  implementation deps.rx.android
+  implementation deps.support.arch.lifecycle.extensions
 
-  provided deps.misc.errorProneAnnotations
-  provided deps.misc.javaxExtras
+  compileOnly deps.misc.errorProneAnnotations
+  compileOnly deps.misc.javaxExtras
 
   errorprone deps.build.errorProne
 }

@@ -45,7 +45,7 @@ def build = [
     ],
 
     gradlePlugins: [
-        android: 'com.android.tools.build:gradle:2.3.0',
+        android: 'com.android.tools.build:gradle:3.0.1',
         apt: 'net.ltgt.gradle:gradle-apt-plugin:0.13',
         dokka: "org.jetbrains.dokka:dokka-gradle-plugin:${versions.dokka}",
         dokkaAndroid: "org.jetbrains.dokka:dokka-android-gradle-plugin:${versions.dokka}",

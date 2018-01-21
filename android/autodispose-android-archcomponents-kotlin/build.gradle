@@ -17,6 +17,7 @@
 buildscript {
   repositories {
     jcenter()
+    google()
   }
 
   dependencies {
@@ -50,9 +51,8 @@ android {
 }
 
 dependencies {
-  compile deps.kotlin.stdlib
-  compile project(':android:autodispose-android-archcomponents')
-  androidTestCompile project(':test-utils')
+  api project(':android:autodispose-android-archcomponents')
+  androidTestImplementation project(':test-utils')
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
