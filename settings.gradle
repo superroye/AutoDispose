@@ -65,4 +65,5 @@ include ':autodispose-kotlin'
 include 'autodispose-rxlifecycle'
 include ':test-utils'
 include ':static-analysis:autodispose-error-prone-checker'
+include ':static-analysis:autodispose-lint'
 
