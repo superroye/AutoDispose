@@ -37,8 +37,8 @@ pluginManagement {
         case 'org.jetbrains.kotlin.android':
           useModule(deps.build.gradlePlugins.kotlin)
           break
-        case 'net.ltgt.errorprone':
-          useVersion(deps.versions.errorPronePlugin)
+        case 'net.ltgt.errorprone-javacplugin':
+          useVersion(deps.versions.errorProneJavacPlugin)
           break
       }
     }

@@ -16,7 +16,7 @@
 
 plugins {
   id 'com.android.library'
-  id 'net.ltgt.errorprone'
+  id 'net.ltgt.errorprone-javacplugin'
 }
 
 android {
@@ -66,9 +66,7 @@ dependencies {
 }
 
 tasks.withType(JavaCompile) {
-  options.compilerArgs += ["-Xep:NullAway:ERROR",
-                           "-XepOpt:NullAway:AnnotatedPackages=com.uber",
-                           "-Xep:RestrictTo:OFF"]
+  options.compilerArgs << "-Xplugin:ErrorProne -Xep:NullAway:ERROR -XepOpt:NullAway:AnnotatedPackages=com.uber -Xep:RestrictTo:OFF"
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
